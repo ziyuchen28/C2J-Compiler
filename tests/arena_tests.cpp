@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include "test.h"
-
+#include "arena.h"
 
 TEST(Arena, Basic)
 {

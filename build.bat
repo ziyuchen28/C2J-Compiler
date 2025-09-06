@@ -16,8 +16,9 @@ if "%~1"=="--clean" (
 mkdir build 2>nul
 pushd build
 cd
-cmake -DCMAKE_BUILD_TYPE=Debug -G "Ninja" .. 
+cmake -DCMAKE_BUILD_TYPE=Debug -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .. 
 popd 
 cmake --build build
+copy build\compile_commands.json .
 
 
